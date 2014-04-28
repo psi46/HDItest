@@ -1,0 +1,67 @@
+ljacklm: Linux (kernel 2.6) and Mac OS X high-level LabJack U12 library and C
+examples
+10/25/2013
+support@labjack.com
+
+
+This package contains the libljacklm high-level library for the U12 and examples
+written in C.  The examples demonstrate libljacklm library usage.  The library
+is a port of the ljackuw high-level Windows driver, and uses the Exodriver for
+low-level USB communications.  The functions are documented in section 4 of the
+U12 User's Guide and in the ljacklm.h header.
+
+Refer to the INSTALL file for library requirements, build and installation
+instructions.
+
+Function execution times are comparable to one ones documented in section 4.x in
+the U12 User's Guide.
+
+Note to Mac OS X users:
+
+The libusb_get_device_list libusb call tends to be slow, causing 900+ ms
+overhead when a device needs to be found and opened over USB.  This overhead
+will be seen in your program's first liblackue function call that communicates
+with a U12.  Subsequent function calls to the U12 in the program  will be the
+standard 20 ms execution time unless an error occurs.
+
+
+Contents of this package:
+
+The libljacklm directory contains the following:
+   * The libljacklm library source and header files, ljacklm.c and
+     ljacklm.h, and the Makefile for Linux and Mac OS X.
+
+The examples directory contains the following:
+   * This directory contains U12 code examples written in C.  The examples use 
+     the ljacklm header file installed in the /usr/local/include directory and
+     the ljacklm library installed in the /usr/local/lib directory.  The
+     applications created from the code run in a terminal.  
+
+
+The INSTALL file provides requirements and installation instructions for the
+liblabjackusb library, along with instructions on building the examples.
+
+
+LICENSE
+
+All ljacklm library and example source code are licensed under MIT X11.
+
+   Copyright (c) 2011 LabJack Corporation <support@labjack.com>
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to deal
+   in the Software without restriction, including without limitation the rights
+   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+   THE SOFTWARE.
