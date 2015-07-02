@@ -32,8 +32,8 @@ modsel b11111
 
 tbmset $E4 $F0    Init TBM, Reset ROC
 tbmset $F4 $F0
-tbmset $E0 $01    Disable PKAM Counter
-tbmset $F0 $01
+tbmset $E0 $41    Disable PKAM Counter
+tbmset $F0 $41
 tbmset $E2 $C0    Mode = Calibration
 tbmset $F2 $C0
 tbmset $E8 $10    Set PKAM Counter
